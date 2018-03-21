@@ -51,7 +51,19 @@ var employees = [
 */
 
 //Code Here
+function employeeUpdater(){
+  for(i=0; i<employees.length; i++){
+    if(employees[i]["firstName"] === "Lorie"){
+      employees[i]["department"] = "HR";
+    }
+    else if(employees[i].firstName === "Theo"){
+      employees.splice(i,1);
+    }
+  }
+  return employees;
+}
 
+employees;
 
 
 ////////// PROBLEM 2 //////////
@@ -69,7 +81,19 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
+function removeDuplicates(){
 
+  for(let i=workplaceAccidents.length-1; i>=0; i--){
+    for(let j=0; j<i; j++){
+      if(workplaceAccidents[i] === workplaceAccidents[j]){
+        workplaceAccidents.splice(i,1);
+      }
+    }
+  }
+  return workplaceAccidents;
+}
+removeDuplicates();
+workplaceAccidents;
 
 
 ////////// PROBLEM 3 //////////
@@ -97,10 +121,11 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;
 
-
+grumpyActivity;
+fluffy2ndFriend;
 
 ////////// PROBLEM 4 //////////
 
@@ -139,8 +164,14 @@ var myCar = {
 */
 
 //Code Here
-
-
+myCar['accidents'];
+function recordCleaner(){
+  for(i=0; i<myCar.accidents.length; i++){
+    myCar.accidents[i].atFaultForAccident = false;
+  }
+}
+recordCleaner();
+myCar;
 
 ////////// PROBLEM 5 //////////
 
@@ -156,7 +187,20 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
         If the number is even, replace it with 'even'.
     4. Return the modified numsArr.
 */
-
+numsArr;
 //Code Here
-
-
+function looper(array){
+  for(let i=0; i<array.length; i++){
+    for(let j=0; j<array[i].length; j++){
+      if(array[i][j] % 2 === 0){
+        array[i][j] = 'even';
+      }
+      else{
+        array[i][j] = 'odd';
+      }
+    }
+  }
+  return array;
+}
+looper(numsArr);
+console.log(numsArr);

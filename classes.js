@@ -30,7 +30,13 @@
 */
 
 //Code Here
+class Employee {
+  constructor(){
+    this.first_name = first_name;
+    this.last_name = last
+  }
 
+}
 
 
 ////////// PROBLEM 2 //////////
